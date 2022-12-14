@@ -1,0 +1,126 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Game 2 Player</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Css/index.css">
+    </head>
+    <body>
+        <div id='start' class='start'>
+            <div style='position: relative;
+            top: 40%;'>
+                <h1> 2 Players Game </h1>
+
+                <button id='startbtn' > Start Game</button>
+            </div>
+           
+
+        </div>
+        <div class='nav'>
+            <h1 style="padding-top: 20px;">2 Player Game</h1>
+            <button id='logout' class="logout" style="">Logout</button>
+            <button id='again' class="again" style="z-index:60000;">Play Again</button>
+        </div>
+        <div class="body">
+            <div id='1' class='player1 active'>
+               
+                <h3 style='color:white;'> Time :<span id='time1' style='color:white;'> </span></h3>
+                <h4 style='color:white;'><span id='po1' style='color:white;'></span> Points<h4>
+                <h2>Player 1</h2>
+                <div class='img'>
+                    <img src='imgs/player-2.png' width='100' height='100'>
+                </div>
+                <button id='btn1' onclick="play()" class='btn'>Play</button>
+                
+
+                <div class='overlay'><h1 id='msg1' style='color:yellow; font-weight:bold;'></h1></div>
+                <div id='win1' class="snowflakes">
+                    <img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div> 
+
+            </div>
+            <div id='Bigoverlay' class='Bigoverlay' style='text-align:center;'>
+                <h1 id='tim' style="color:white;">10</h1>
+                <h1 id='msglod' style="color:white;"></h1>
+                <div id='loader' class="loader">
+               
+            </div>
+        </div>
+            <div id='2' class='player2'>
+               
+                <h3 > Time :<span id='time2'> </span></h3>
+                <h4>  <span id='po2'></span> Points<h4>
+                <h2>Player 2</h2>
+                <div class='img'>
+                    <img src='imgs/player-2.png' width='100' height='100'>
+                </div>
+                <button id='btn2' class='btn'>Play</button>
+                <div class='overlay'><h1 id='msg2' style='color:yellow; font-weight:bold;'></h1></div>
+                <div id='win2' class="snowflakes">
+                    <img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'><img src='imgs/Rose.png' width='50' height='50'>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div> 
+            </div>
+            <audio style='display:none;' controls id="music">
+                <source src="song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <script src="Js/index.js"> </script>
+    </body>
+</html>

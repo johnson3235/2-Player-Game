@@ -1,0 +1,339 @@
+body{
+    width: 100%;
+    height: 815px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(9, 41, 57);
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+    display: inline-flex;
+    margin: auto;
+}
+.nav{
+    text-align: center;
+    background-color: rgb(9, 41, 57);
+    width: 100%;
+    height: 90px;
+    color: white;
+    z-index: 600000;
+}
+.player1,.player2{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    padding: auto;
+}
+
+.player1{
+    background-color: rgb(11, 106, 169);
+    
+}
+
+.player2{
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+h2{
+    color: white;
+}
+h4{
+    left: 0;
+}
+.player1 .img , .player2 .img  {
+    padding: 5px;
+    background-color: darkgrey;
+    border: 4px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.start{
+ width: 100%;
+ height: 100%;
+ z-index: 7000;
+ opacity: 1;
+ background-color: black;
+ color: white;
+ margin: auto;
+ text-align: center;
+ position: absolute;
+ top: 0;
+ left: 0;
+
+}
+
+.start.active{
+  display: none;
+}
+
+.start input{
+  width: 250px;
+  height: 60px;
+  margin-bottom: 50px;
+
+}
+
+.start button{
+  width: 200px;
+  height: 50px;
+  margin-bottom: 50px;
+  background-color: yellow;
+  color:rgb(9, 41, 57);
+  border: 3px solid rgb(9, 41, 57);
+  border-radius: 5px;
+  font-size: 20;
+  font-weight: bold;
+
+}
+.player1.active .img , .player2.active .img  {
+    background-color: red;
+}
+
+.player2 .btn{
+    background-color: rgb(11, 106, 169);
+    width: 180px;
+    height: 50px;
+    color: white;
+    padding: 5px;
+    border:3px white solid;
+    border-radius: 5px;
+
+}
+
+.player1 .btn{
+    background-color: rgb(41, 41, 41);
+    width: 180px;
+    height: 50px;
+    color: white;
+    padding: 5px;
+    border:3px white solid;
+    border-radius: 5px;
+
+}
+
+
+.player1 .btn:hover,.player2 .btn:hover{
+cursor: pointer;
+}
+
+.overlay{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: .8;
+    top: 0;
+    position:absolute;
+    display: none;
+}
+
+.Bigoverlay{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 110;
+    opacity: 1;
+    top: 150px;
+    left: 0;
+    position:absolute;
+    display: none;
+}
+
+.player1 .overlay , .player2 .overlay{
+    left: 0;
+}
+
+.Bigoverlay.active{
+    display: inline;
+}
+
+
+.player2 .overlay ,.player1 .overlay{
+    display: inline;
+}
+
+
+.player2.active .overlay ,.player1.active .overlay{
+    display: none;
+}
+
+.logout{
+    float: right;
+    padding: 15px;
+    margin: 10px 60px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+
+.again{
+    float: right;
+    padding: 15px;
+    margin: 10px 60px;
+    width: 150px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: 3px solid white;
+    border-radius: 5px;
+    display: none;
+   
+}
+
+.again.active{
+    display: block;
+}
+
+.again:hover{
+  cursor: pointer;
+}
+
+
+
+.loader {
+    position:absolute;
+    top: 20%;
+    left: 46%;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .snowflakes {
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    top: -290px;
+    left: 0;
+    display: none;
+    z-index:2000;
+  }
+  i,
+  i:after,
+  i:before {
+    background: white;
+  }
+  .snowflakes img{
+    -webkit-animation: snowflakes 3s linear 2s 20;
+  }
+  i {
+    display: inline-block;
+    -webkit-animation: snowflakes 3s linear 2s 20;
+    -moz-animation: snowflakes 3s linear 2s 20;
+    position: relative;
+  }
+  i:after,
+  i:before {
+    height: 100%;
+    width: 100%;
+    content: ".";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-transform: rotate(120deg);
+  }
+  i:before {
+    -webkit-transform: rotate(240deg);
+  }
+  @-webkit-keyframes snowflakes {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0) rotate(0deg) scale(0.6);
+    }
+    100% {
+      -webkit-transform: translate3d(15px, 1200px, 0px) rotate(360deg) scale(0.6);
+    }
+  }
+
+  .snowflakes i:nth-child(3n) {
+    width: 16px;
+    height: 4px;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: 30;
+    -webkit-transform-origin: right -45px;
+  }
+
+  .snowflakes img:nth-child(3n) {
+    width: 50px;
+    height: 50px;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: 30;
+    -webkit-transform-origin: right -45px;
+  }
+
+  .snowflakes i:nth-child(3n+1) {
+    width: 24px;
+    height: 6px;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: 45;
+    -webkit-transform-origin: right -30px;
+  }
+
+  .snowflakes img:nth-child(3n+1) {
+    width: 50px;
+    height: 50px;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: 45;
+    -webkit-transform-origin: right -30px;
+  }
+  .snowflakes i:nth-child(3n+2) {
+    width: 32px;
+    height: 8px;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: 60;
+    -webkit-transform-origin: right -15px;
+  }
+  /* different delays so they don't all start at the same time */
+  .snowflakes i:nth-child(7n) {
+    opacity: 0.3;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  .snowflakes img:nth-child(7n) {
+    opacity: 0.3;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-timing-function: ease-in;
+  }
+  .snowflakes i:nth-child(7n+1) {
+    opacity: 0.4;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-timing-function: ease-out;
+  }
+  .snowflakes i:nth-child(7n+2) {
+    opacity: 0.5;
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-timing-function: linear;
+  }
+  .snowflakes i:nth-child(7n+3) {
+    opacity: 0.6;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-timing-function: ease-in;
+  }
+  .snowflakes i:nth-child(7n+4) {
+    opacity: 0.7;
+    -webkit-animation-delay: 2.5s;
+    -webkit-animation-timing-function: linear;
+  }
